@@ -1,0 +1,298 @@
+.navigation {
+	position: fixed;
+	max-height: 70px;
+	z-index: 3;
+	width: 100%;
+	padding-top: 17px;
+	background: none;
+	overflow: hidden;
+	transition: all 600ms;
+	-moz-transition: all 600ms;
+	-webkit-transition: all 600ms;
+	/*top: -100px;*/
+	padding-bottom: 6px;
+	/*font-family: "Montserrat", sans-serif;*/
+	&:focus,
+	&:hover {
+		opacity: 1;
+	}
+	.nav-toggle {
+		display: none;
+		cursor: pointer;
+		font-size: 20px;
+		position: absolute;
+		right: 22px;
+		top: -9px;
+		width: 30px;
+		@include animate4(all, 600ms); /*transition: all 600ms ease-in;*/
+	}
+}
+
+/*.navigation:focus,
+.navigation:hover{
+	opacity: 1;
+}*/
+
+@media only screen and (max-width: $sm) {
+	.navigation {
+		padding-top: 20px;
+	}
+}
+
+.open-nav { /*barber-website.js*/
+	max-height: 400px !important;
+}
+
+.navigation .nav-toggle:after, 
+.navigation .nav-toggle:before, 
+.navigation .nav-toggle span {
+	content: '';
+	display: block;
+	height: 1.5px;
+	margin: 10px 0;
+	@include animate(all, 600ms);/*transition: all 600ms ease-in-out;*/
+	background-color: $persian-red;
+	border-radius: 3px;
+}
+
+.navigation .nav-toggle:hover:before {
+	transform: translateY(12px) rotate(135deg);
+	background-color: $white;
+}
+
+.navigation .nav-toggle:hover:after {
+	transform: translateY(-12px) rotate(-135deg);
+	background-color: $white;
+}
+
+.navigation .nav-toggle:hover span {
+  transform: scale(0);
+  background-color: $white;
+}
+
+/*.navigation .nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 22px;
+  top: -9px;
+  width: 30px;
+  -webkit-transition: all 600ms ease-in;
+  -moz-transition: all 600ms ease-in;
+  transition: all 600ms ease-in;
+}*/
+
+@media only screen and (max-width: $sm) {
+	.navigation {
+		.navigation-menu {
+			.logo {
+				float: none;
+			}
+			.nav-toggle {
+				display: block;
+			}
+		}
+	}
+	/*	.navigation .nav-toggle {
+		display: block;
+	}
+	.navigation .navigation-menu .logo {
+		float: none;
+	}*/
+}
+
+.sticky { /*barber-website.js*/
+	background-color: $dark-green;
+	opacity: .4;
+	top: 0;
+	border-bottom: 1px solid $gainsboro;
+}
+
+.navigation {
+	.navigation-menu {
+		display: inline-block;
+
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		padding: 0 2%;
+		.logo {
+			width: 50px;
+			font-size: 25px;
+			color: $persian-red;
+			text-transform: uppercase;
+			float: left;
+			display: block;
+			margin-top: 0;
+			line-height: 1;
+			margin-bottom: 10px;
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				color: $white;
+				@include animate(all, 600ms);/*transition: all 600ms ease-in-out;*/
+			}
+		}
+		.barber-class {
+			display: flex;
+		}
+	}
+}			
+
+/*.navigation .navigation-menu .logo {
+	width: 50px;
+	font-size: 25px;
+	color: #D92B2B;
+	text-transform: uppercase;
+	float: left;
+	display: block;
+	margin-top: 0;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.navigation .navigation-menu .logo:hover {
+	text-decoration: none;
+	color: $white;
+	-webkit-transition: all 600ms ease-in-out;
+	-moz-transition: all 600ms ease-in-out;
+	transition: all 600ms ease-in-out;
+}
+
+
+*/
+
+.nav {
+	@include flexbox();
+	margin: 0 auto;
+	.menu {
+		list-style: none;
+		overflow: hidden;
+		text-align: right;
+		float: right;
+		li {
+			display: inline-block;
+			margin-left: 35px;
+			line-height: 1.5;
+		}
+	}
+}
+
+@media only screen and (max-width: $sm) {
+	.nav {
+		width: 100%;
+	}
+}
+
+/*.nav .menu {
+	list-style: none;
+	overflow: hidden;
+	text-align: right;
+	float: right;
+}*/
+
+@media only screen and (max-width: $sm) {
+	.nav {
+		.menu {
+			padding-top: 40px; /*padding-top: 10px;*/
+			margin-bottom: 22px;
+			float: left;
+			text-align: center; /*text-align: left;*/
+			width: 100%;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+/*.nav .menu li {
+	display: inline-block;
+	margin-left: 35px;
+	line-height: 1.5;
+}*/
+
+@media only screen and (max-width: $sm) {
+	.nav {
+		.menu {
+			li {
+				width: 100%;
+				padding: 7px 0;
+				margin: 0;			
+			}
+		}
+	}
+	/*	.nav .menu li {
+		width: 100%;
+		padding: 7px 0;
+		margin: 0;
+	}*/
+}
+
+.nav {
+	.menu {
+		a {
+			color: $persian-red;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-family: 'oswald', sans-serif;
+			&:hover {
+				color: $white;
+				@include animate(all, 600ms);/*transition: all 600ms ease-in-out;*/
+			}
+		}
+	}
+}
+
+/*.nav .menu a {
+	color: #D92B2B;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.nav .menu a:hover {
+	color: $white;
+	-webkit-transition: all 600ms ease-in-out;
+	-moz-transition: all 600ms ease-in-out;
+	transition: all 600ms ease-in-out;
+}
+*/
+/*
+.navigation .navigation-menu {
+	width: 100%;
+	/*max-width: 940px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 2%;
+}
+*/
+
+@-webkit-keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+}
+
+@keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+		-ms-transform: translateY(20px);
+		transform: translateY(20px);
+	}
+}

@@ -1,0 +1,334 @@
+/*===================================
+	Footer-section
+=====================================*/
+.footer-section {
+	background-color: $blue-charcoal;
+	.footer-description {
+		@include flexbox();
+		text-align: center;
+		@extend %justify-content-center; /*justify-content: center;*/
+		.description-text {
+			p {
+				line-height: 1.7rem;
+				text-align: justify;
+			}
+		}
+	}
+}
+
+/* index.html footer nav menu START
+.footer-link {
+	@include flexbox();
+	justify-content: center;
+	padding: 50px 0 30px 0;
+	.footer-column {
+		h6 {
+			text-transform: uppercase;
+			font-weight: bold;
+				li {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0 3em;
+			a {
+				color: $white;
+				&:hover {
+					text-decoration: none;
+					@include animate(all, .6s);//transition: all 600ms ease-in-out;
+					color: $persian-red;
+				}
+			}
+		}
+	}
+}
+// index.html footer nav menu END*/
+.footer-link {
+	padding: 2% 0; /*padding: 30px 0;*/
+	display: flex;
+		justify-content: center;
+	ul {
+		@include flexbox();
+		flex-flow: row wrap;
+		justify-content: center;
+		list-style-type: none;
+		padding: 0;
+		margin: 0 5em;
+		li {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0 3em;
+			a {
+				color: $white;
+				&:hover {
+					text-decoration: none;
+					@include animate(all, .6s);/*transition: all 600ms ease-in-out;*/
+					color: $persian-red;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-link {
+		ul{
+			flex-direction: column;
+			li{
+				text-transform: uppercase;
+				font-weight: bold;
+				margin: 5px 3em;
+			}
+		}
+	}
+}
+
+/*===================================
+	Contact form-section
+=====================================*/
+.contact-form {
+	.form-group {
+		position: relative;
+		padding-top: 20px;
+		margin-bottom: 0;
+		.form-control {
+			border-radius: 0;
+			border-width: 0 0 2px 0;
+		}
+		textarea {
+			resize: none;
+		}
+		label {
+			position: absolute;
+			left: 10px;
+			top: 25px;
+			@include animate3(all, .4s);/*transition: all .4s ease;*/
+		}
+		.input-highlight {
+			content: '';
+			width: 0;
+			height: 2px;
+			background-color: $amaranth;
+			position: absolute;
+			display: block;
+			bottom: 0;
+			@include animate3(width, .4s); /*transition: width .4s ease;*/
+		}
+	}
+	.btn {
+		border-radius: 0;
+	}
+}
+
+/*
+.contact-form .form-group:first-child:last-child {
+	height: 100%;
+}
+.contact-form .form-group:first-child:last-child .form-control {
+	/*height: 100%;
+	height: 83%;
+}
+.contact-form .form-group .form-control:focus, .contact-form .form-group .form-control.hasValue {
+	box-shadow: none;
+	border-color: $link-water;
+}
+.contact-form .form-group .form-control:focus ~ .input-highlight, .contact-form .form-group .form-control.hasValue ~ .input-highlight {
+	width: 100%;
+}
+.contact-form .form-group .form-control:focus ~ label, .contact-form .form-group .form-control.hasValue ~ label {
+	-webkit-transform: scale(.7);
+			transform: scale(.7);
+	top: 0;
+	left: 0;
+}
+*/
+
+.contact-form .form-group {
+	&:first-child:last-child {
+		height: 100%;
+		.form-control {
+			height: 100%;
+		}
+	}
+
+	.form-control {
+		&:focus, &.hasValue {
+			box-shadow: none;
+		}
+
+		&:focus ~ .input-highlight, 
+		&.hasValue ~ .input-highlight {
+			width: 100%;
+		}
+
+		&:focus ~ label, 
+		&.hasValue ~ label {
+			-webkit-transform: scale(0.7);
+			transform: scale(0.7);
+			top: 0;
+			left: 0;
+	    }
+	}
+}
+
+/* Contact form js START */
+.form-row {
+	margin: 0;
+}
+.form-control-msg {
+	display: none;
+}
+.has-error {
+	.form-control-msg {
+		display: block;
+	}
+	.form-control {
+		border-color: #ff0000;
+	}
+}
+.js-show-feedback {
+	display: block;
+}
+/* Contact form js END */
+
+/*===================================
+	Footer social media-section
+=====================================*/
+.footer-social-media {
+	@include flexbox();
+	margin: 0 auto;
+	flex-direction: row;
+	position: relative;
+	justify-content: center;
+	padding-top: 1em;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		@include flexbox();
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+		li {
+			background-color: $dark-shade-of-grey;
+			float: left;
+			height: 50px;
+			list-style: none;
+			margin: 5px 10px;
+			width: 50px;
+			&:before {
+				font: 400 1em/50px "FontAwesome";
+			}
+			&:hover {
+				animation: transform .5s forwards, shadow 1s forwards;
+				-ms-animation: transform .5s forwards, shadow 1s forwards;
+				-moz-animation: transform .5s forwards, shadow 1s forwards;
+				-webkit-animation: transform .5s forwards, shadow 1s forwards;
+			}
+		}
+		.facebook {
+			&:hover {
+				background-color: $facebook-blue;
+			}
+			&:before {
+				color: $white;
+				content: '\f09a';
+				display: block;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+		.twitter {
+			&:hover {
+				background-color: $twitter-logo-blue;
+			}
+			&:before {
+				color: $white;
+				content: '\f099';
+				display: block;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+		.google {
+			&:hover {
+				background-color: $google-plus-red;
+			}
+			&:before {
+				color: $white;
+				content: '\f0d5';
+				display: block;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+		.linkedin {
+			&:hover {
+				background-color: $linkedin-blue;
+			}
+			&:before {
+				color: $white;
+				content: '\f0e1';
+				display: block;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+		.instagram {
+			&:hover {
+				background-color: $instagram-red-orange;
+			}
+			&:before {
+				color: $white;
+				content: '\f16d';
+				display: block;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+	}
+
+	@-webkit-keyframes transform {
+		from {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+		}
+		to {
+			transform: translateY(-10px);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			-ms-transform: translateY(-10px);
+		}
+	}
+	
+	@keyframes transform {
+		from {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+		}
+		to {
+			transform: translateY(-10px);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			-ms-transform: translateY(-10px);
+		}
+	}
+	@-webkit-keyframes shadow {
+		from {
+			box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+		}
+		to {
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+	}
+	@keyframes shadow {
+		from {
+			box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+		}
+		to {
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+	}
+}
+

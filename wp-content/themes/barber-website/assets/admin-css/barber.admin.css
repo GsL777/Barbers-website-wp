@@ -1,0 +1,88 @@
+/*
+	@package barber-theme
+*/
+
+/*CSS for barber-admin.php*/
+#wpcontent {
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif, "Playfair Display", serif, "Roboto";
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5,
+.form-table th,
+.form-wrap label {
+	font-weight: 500;
+}
+
+.barber-general-form,
+.barber-sidebar-preview {
+	display: inline-block;
+	float: left;
+}
+
+.barber-sidebar-preview {
+	width: 280px;
+	background-color: #1F1F1F;
+	padding: 20px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.barber-sidebar {
+	display: block;
+	text-align: center;
+}
+
+h1.barber-username,
+h2.barber-description {
+	font-weight: 100;
+	color: #fff;
+}
+
+h1.barber-username {
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+
+h2.barber-description {
+	font-size: 15px;
+	margin: 0 0 20px;
+}
+
+.barber-icon-sidebar--facebook {
+	margin-left: 8px;
+	color: #fff;
+}
+
+.dashicons-facebook-alt::before {
+    background-color: #3b5998;
+    border-radius: 2px;
+}
+
+.barber-icon-button:before {
+	margin: 4px 3px 0 -3px;
+}
+
+.image-container {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.profile-picture {
+	width: 122px;
+	height:122px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 20px auto;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*.profile-picture img {
+	width: 100%;
+	height: auto;
+}*/

@@ -1,0 +1,120 @@
+//colors
+$white: #FFF;
+$white2: rgba(0, 0, 0, .1);
+
+$dark-shade-of-grey: #222; /* A very dark shade of gray */
+
+$dark-green: #090F0F; /* Dark Green */
+$blue-charcoal: #1B232E; /* Blue Charcoal */
+$persian-red: #D92B2B; /* Persian Red */
+
+$facebook-blue: #3B5998; /* Facebook Blue */
+$twitter-logo-blue: #00ACED; /* Twitter Logo Blue */
+$google-plus-red: #DD4B39; /* Google Plus Red */
+$linkedin-blue: #007BB5; /* Linkedin Blue */
+$instagram-red-orange: #E95950; /* Instagram Red Orange */
+$amaranth: #E03443; /* Amaranth */
+
+$black: #000; /* Black */
+$shade-of-gold: #F1D600;/* Shade of Gold */
+$cyan-blue-medium-light-shade: #4B8EE7; /* A medium light shade of cyan-blue */
+$gray80: #CCC; /* Gray80 */
+$sunflower: #E0C91F; /* Sunflower */
+
+$link-water: #CED4DA; /*Link Water*/
+
+$gainsboro: #dcdcdc; /*Gainsboro*/
+
+//Fonts
+/*$body-font: 'Raleway', 'Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif, 'Playfair Display', serif, 'Roboto';
+*/
+//Variables
+
+//Placeholder
+@mixin flexbox() {
+	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+}
+
+@mixin backgroundcover(){
+	background-size: cover;	
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+@mixin backgroundfill(){
+	background-size: fill;	
+	-o-background-size: fill;
+	-moz-background-size: fill;
+	-webkit-background-size: fill;
+}
+
+%align-items-end {
+	-webkit-align-items: flex-end;
+			  -ms-flex-align: end;
+			align-items: flex-end;
+}
+
+%align-items-center {
+	 -webkit-align-items: center;
+		  -ms-flex-align: center;
+			 align-items: center;
+}
+
+%justify-content-center {
+	-webkit-justify-content: center;
+			justify-content: center;
+}
+
+@mixin transform( $val ) {
+	-webkit-transform: $val;
+	-moz-transform: $val;
+	-ms-transform: $val;
+	-o-transform: $val;
+	transform: $val;
+}
+
+@mixin animate ($attr, $time){
+	-webkit-transition: $attr $time ease-in-out;
+	-moz-transition: $attr $time ease-in-out;
+	-ms-transition: $attr $time ease-in-out;
+	-o-transition: $attr $time ease-in-out;
+	transition: $attr $time ease-in-out;
+}
+
+@mixin animate2 ($attr, $time){
+	-webkit-transition: $attr $time ease-out;
+	-moz-transition: $attr $time ease-out;
+	-ms-transition: $attr $time ease-out;
+	-o-transition: $attr $time ease-out;
+	transition: $attr $time ease-out;
+}
+
+@mixin animate3 ($attr, $time){
+	-webkit-transition: $attr $time ease;
+	-moz-transition: $attr $time ease;
+	-ms-transition: $attr $time ease;
+	-o-transition: $attr $time ease;
+	transition: $attr $time ease;
+}
+
+@mixin animate4 ($attr, $time){
+	-webkit-transition: $attr $time ease-in;
+	-moz-transition: $attr $time ease-in;
+	-ms-transition: $attr $time ease-in;
+	-o-transition: $attr $time ease-in;
+	transition: $attr $time ease-in;
+}
+
+//Media Queries
+$xs: 575px; /*Extra small devices (portrait phones, less than 576px)*/
+
+$sm: 767px; /* Small devices (landscape phones, less than 768px)*/
+
+$md: 991px; /* Medium devices (tablets, less than 992px)*/
+
+$lg: 1199px; /* Large devices (desktops, less than 1200px)*/
