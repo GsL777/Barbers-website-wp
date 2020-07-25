@@ -30,6 +30,7 @@ function barber_remove_meta_version(){
 	return '';
 }
 
-add_filter( 'the_generator', 'barber_remove_meta_version');//meta name="generator" so first parameter must be the_generator. Second parameter - function name (in this case modeling_remove_meta_version).
+
+add_filter( 'the_generator', 'barber_remove_meta_version');//meta name="generator" so first parameter must be the_generator. Second parameter - function name (in this case barber_remove_meta_version).
 
 ?>

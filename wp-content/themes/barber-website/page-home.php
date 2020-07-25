@@ -31,7 +31,6 @@
 	<!-- SERVICES SECTION START -->
 	<section id="services" class="services-section smooth-scroll">
 		<div class="container">
-
 			<?php 
 				$args = array(
 					'type'				=> 'post',
@@ -48,7 +47,7 @@
 						get_template_part('template-parts/content', 'services'); 
 
 					endwhile;
-
+					
 				endif;
 
 				wp_reset_postdata();
@@ -96,7 +95,6 @@
 	<section class="counter-section" data-wow-duration="1.4s">
 		<div class="container">
 			<div class="row">
-
 				<?php 
 					$args = array( 
 						'type'				=> 'post',

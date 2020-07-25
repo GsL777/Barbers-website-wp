@@ -63,7 +63,7 @@ function barber_custom_settings(){
 	register_setting( 'barber-custom-css-options', 'website_css', 'barber_sanitize_custom_css');//barber-custom-css.php
 	//PUT IN header.php that it will be displayed and will work.
 
-	add_settings_section( 'barber-custom-css-section', 'Custom CSS', 'barber_custom_css_section_callback', 'barber_website_css' ); //barber_website_css - from function barber_add_admin_page(), //barber Portfolio CSS Options section.
+	add_settings_section( 'barber-custom-css-section', 'Custom CSS', 'barber_custom_css_section_callback', 'barber_website_css' ); //barber_website_css - from function barber_add_admin_page(), //Barber CSS Options section.
 	//barber-custom-css.php
 
 	add_settings_field( 'custom-css', 'Insert your Custom CSS', 'barber_custom_css_callback', 'barber_website_css', 'barber-custom-css-section' );
@@ -133,7 +133,7 @@ function barber_custom_css_callback(){
 	$css = ( empty($css) ? '/* Barber Theme Custom CSS */' : $css );
 	//echo '<textarea placeholder="Sunset Custom Css" >'.$css.'</textarea>';
 	echo '<div id="customCss">'.$css.'</div><textarea id="website_css" name="website_css" style="display:none;visibility:hidden;">'.$css.'</textarea>';
-}//div id must be the same as in admin-js.js -> portfolio.custom_css.js in ace.edit() section.
+}//div id must be the same as in admin-js -> barber.custom_css.js in ace.edit() section.
 //Contact CSS Options
 
 //Barber CSS Sanitization

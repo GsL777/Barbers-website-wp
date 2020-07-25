@@ -1,5 +1,5 @@
 
-<!-- FILES INCLUDE barber-website.js, function.php(to add ajax.php), shortcodes.php, ajax.php, theme-support.php, custom-post-type.php, footer.scss -->
+<!-- FILES INCLUDE barber-website.js, function.php(to add ajax.php), function-admin.php, shortcodes.php, ajax.php, theme-support.php, custom-post-type.php, barber-contact-form.php, footer.scss -->
 
 <!-- in modeling-contact-form.php write a comment <p>Use this <strong>shortcode</strong> to activate the Contact Form inside a Page or Post</p>
 <p><code>[contact_form]</code></p> -->

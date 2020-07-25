@@ -1,5 +1,5 @@
 <!-- Custom Barber Custom CSS on WordPress dashboard-->
-<!-- Files included: barber.ace.css, barber.admin.css, ace (downloaded folder), barberb.custom_css.js, barber-admin.php, function-admin.php, enqueue.php... -->
+<!-- Files included: barber.ace.css, barber.admin.css, ace (downloaded folder), barberb.custom_css.js, function-admin.php, enqueue.php, header.php  -->
 <h1>Barber Custom CSS</h1>
 
 <?php settings_errors();//function that will print an error ?>

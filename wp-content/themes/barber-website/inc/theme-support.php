@@ -140,3 +140,62 @@ function mailtrap($phpmailer) {//code in ajax.php function modeling_save_contact
 add_action('phpmailer_init', 'mailtrap');
 //function for testing CONTACT FORM email END
 */
+
+/*
+	===============================
+		SOCIAL SHARE BUTTONS START
+	===============================
+*/
+
+function social_btn(){
+	// $title = get_the_title();
+	// $permalink = get_permalink();
+
+	//Compose the share links for Facebook, Twitter, LinkedIn, Instagram
+	$facebook = sprintf('https://www.facebook.com/login/');
+	// $facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $permalink;
+	$twitter = sprintf('https://twitter.com/login?lang=en-gb');
+	$google = sprintf('https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=http%3A%2F%2Fsupport.google.com%2Fplus%2Fanswer%2F1301225%3Fco%3DGENIE.Platform%253DDesktop%26hl%3Den&flowName=GlifWebSignIn&flowEntry=ServiceLogin');
+	$linkedin = sprintf('https://www.linkedin.com/');
+	$instagram = sprintf('https://www.instagram.com/accounts/login/');
+
+	// Wrap the buttons
+	$output = '<ul>';
+		// Add the links inside the wrapper
+		$output .= '<a href="' . $facebook . '" target="_blank" rel="nofollow"><li class="facebook"></li></a>';
+
+		$output .= '<a href="' . $twitter . '" target="_blank" rel="nofollow"><li class="twitter"></li></a>';
+
+		$output .= '<a href="' . $google . '" target="_blank" rel="nofollow"><li class="google"></li></a>';
+
+		$output .= '<a href="' . $linkedin . '" target="_blank" rel="nofollow"><li class="linkedin"></li></a>';
+
+		$output .= '<a href="' . $instagram . '" target="_blank" rel="nofollow"><li class="instagram"></li></a>';
+
+	$output .= '</ul>';
+
+	return $output;
+}
+/*
+	===============================
+		SOCIAL SHARE BUTTONS END
+	===============================
+*/
+
+/*
+	===============================
+		YEAR START
+	===============================
+*/
+
+	function year(){
+		date_default_timezone_set('Europe/London'); 
+		$this_year = date('Y');
+
+		return $this_year;
+	}
+/*
+	===============================
+		YEAR END
+	===============================
+*/

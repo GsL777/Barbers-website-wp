@@ -15,7 +15,7 @@
 		<div class="link-button">
 			<!-- <a onclick="history.back(-1)" class="link-button link-back-button">Go Back</a> -->
 			<a href="#" onclick="history.go(-1)" class="link-button link-back-button">Go Back</a>
-			<a href="index.html" class="link-button">Go to Home Page</a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="link-button">Go to Home Page</a>
 		</div>
 	</div>
 </div>

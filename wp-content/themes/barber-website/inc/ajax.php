@@ -11,7 +11,7 @@
 // ADD ajax.php to functions.php
 //FILES INCLUDE barber-portfolio.js, function.php(to add ajax.php), contact-form.php, shortcodes.php, theme-support.php, custom-post-type.php, footer.scss
 //function barber_save_contact(); on the bottom
-add_action( 'wp_ajax_nopriv_barber_save_user_contact_form', 'barber_save_contact' );//wp_ajax_nopriv_barber_save_user_contact_form - ajax call with no privilages so even a user that is not logged can call (first parameter) portfolio_load_more that is equal to custom function (second parameter) barber_load_more that was created. For contact-form.php file.
+add_action( 'wp_ajax_nopriv_barber_save_user_contact_form', 'barber_save_contact' );//wp_ajax_nopriv_barber_save_user_contact_form - ajax call with no privilages so even a user that is not logged can call (first parameter) barber_load_more that is equal to custom function (second parameter) barber_load_more that was created. For contact-form.php file.
 
 add_action( 'wp_ajax_barber_save_user_contact_form', 'barber_save_contact' ); //wp_ajax_barber_save_user_contact_form - activating this action to wp_ajax function for a logged user. For contact-form.php file.
 

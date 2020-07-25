@@ -27,6 +27,19 @@ jQuery(document).ready(function($){
 	});
 
 
+	//Nav Menu Active Click Item(button) with jQuery START
+	//.activex class in navbar.scss
+	$('#menu-header-nav-menu li a').on('click', function(e) {
+		$('#menu-header-nav-menu li a').removeClass('activex');
+
+		var $this = $(this);
+		if (!$this.hasClass('activex')) {
+			$this.addClass('activex');
+		}
+	});
+	//Nav Menu Active Click Item(button) with jQuery END
+
+
 	// Navigation Scroll
 	$('.nav a').click(function(event) {
 		var id = $(this).attr("href");
@@ -37,7 +50,6 @@ jQuery(document).ready(function($){
 		}, 400);
 		event.preventDefault();
 	});
-
 
 	/*Number count for stats, using jQuery animate START*/
 	$('.counting').each(function() {

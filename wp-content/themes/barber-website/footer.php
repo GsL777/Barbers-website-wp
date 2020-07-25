@@ -89,30 +89,12 @@
 				</div><!-- .footer-description-->
 
 				<div class="footer-social-media">
-					<ul>
-						<?php 
-							$facebook = 'https://www.facebook.com/login/';
-							$twitter = 'https://twitter.com/login?lang=en-gb';
-							$google = 'https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=http%3A%2F%2Fsupport.google.com%2Fplus%2Fanswer%2F1301225%3Fco%3DGENIE.Platform%253DDesktop%26hl%3Den&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
-							$linkedin = 'https://www.linkedin.com/';
-							$instagram = 'https://www.instagram.com/accounts/login/';
-						?>
-
-						<a target="_blank" href="<?php echo $facebook; ?>" target="_blank" rel="nofollow"><li class="facebook" ></li></a>
-						<a target="_blank" href="<?php echo $twitter; ?>"><li class="twitter"></li></a>
-						<a target="_blank" href="<?php echo $google; ?>"><li class="google"></li></a>
-						<a target="_blank" href="<?php echo $linkedin; ?>"><li class="linkedin"></li></a>
-						<a target="_blank" href="<?php echo $instagram; ?>"><li class="instagram"></li></a>
-					</ul>
+					<?php echo social_btn();//function in theme-support.php ?><!-- .socials -->
 				</div><!-- .footer-social-media -->
 
-				<?php 
-					date_default_timezone_set('Europe/Vilnius'); 
-					$this_year = date('Y');
-				?>
 
 				<div class="footer-copyright text-center py-3">
-					<p>&copy; 2019 - <?php echo $this_year; ?> Copyright</p>
+					<p>&copy; 2019 - <?php echo year(); //function in theme-support.php ?> Copyright</p>
 				</div><!-- .footer-copyright -->
 			</div><!-- .container -->
 		</footer>

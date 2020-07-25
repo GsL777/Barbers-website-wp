@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?>>
 	<head>
 		<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title><!-- To set a page title go to dashboard Settings -> General -> write in a Site Title a title. It can be seen with an inspect -->
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -33,12 +33,14 @@
 		endif;
 		//to print actual class as example just on the home page
 
-		/*write an if statement and copy a variable $awesome_classes to <body <?php body_class()?>> instead of array
-		*/
+		/*write an if statement and copy a variable $awesome_classes to <body <?php body_class()?>> instead of array*/
 	?>
 
-	<body>
-
+	<body <?php body_class(
+		//body_class($barber_classes);
+		//array( 'barber-class', 'my-class' )  //through an array we can insert class'es
+	); //if we change page the class of the body will change and it's going to print a custom class based on the page. With this class there is an ability to style a page in a different way based on the content the user sees?>
+	>
 
 		<header class="navigation">
 		    <div class="navigation-menu row">
@@ -46,7 +48,7 @@
 
 				<div <?php body_class(
 						body_class($barber_classes)
-						//array( 'portfolio-class', 'my-class' )  //through an array we can insert class'es
+						//array( 'barber-class', 'my-class' )  //through an array we can insert class'es
 					); //if we change page the class of the body will change and it's going to print a custom class based on the page. With this class there is an ability to style a page in a different way based on the content the user sees?>>
 
 					<div class="nav-toggle">
@@ -54,7 +56,7 @@
 					</div><!-- .nav-toggle -->
 
 					<nav class="nav">
-						<?php //theme-support.php function modeling_register_nav_menu
+						<?php //theme-support.php function barber_register_nav_menu
 							wp_nav_menu(
 								array(
 									'theme_location'	=> 'primary',
@@ -66,7 +68,6 @@
 						?>
 					</nav>
 				</div><!-- body_class -->
-
 		    </div><!-- / row -->
 		</header>
 
@@ -79,27 +80,11 @@
 			<div class="text-content">
 				<div class="text-content2">
 					<h1>Your dream style</h1>
-					<p><?php bloginfo( 'description' ); //prints info from WP Dashboard -> Settings -> General -> Site title, Tagline?>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, rerum!</p>
+					<p><?php bloginfo( 'description' ); //prints info from WP Dashboard -> Settings -> General -> Site title, Tagline?></p>
 				</div><!-- .text-content2 -->
 			</div><!-- .text-content -->
 
 			<div class="header-social-media">
-				<ul>
-					<?php 
-						// $title = get_the_title();
-						// $permalink = get_permalink();
-						$facebook = 'https://www.facebook.com/login/';
-						$twitter = 'https://twitter.com/login?lang=en-gb';
-						$google = 'https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=http%3A%2F%2Fsupport.google.com%2Fplus%2Fanswer%2F1301225%3Fco%3DGENIE.Platform%253DDesktop%26hl%3Den&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
-						$linkedin = 'https://www.linkedin.com/';
-						$instagram = 'https://www.instagram.com/accounts/login/';
-					?>
-
-					<a target="_blank" href="<?php echo $facebook; ?>" target="_blank" rel="nofollow"><li class="facebook" ></li></a>
-					<a target="_blank" href="<?php echo $twitter; ?>"><li class="twitter"></li></a>
-					<a target="_blank" href="<?php echo $google; ?>"><li class="google"></li></a>
-					<a target="_blank" href="<?php echo $linkedin; ?>"><li class="linkedin"></li></a>
-					<a target="_blank" href="<?php echo $instagram; ?>"><li class="instagram"></li></a>
-				</ul>
+				<?php echo social_btn();//function in theme-support.php ?><!-- .socials -->
 			</div><!-- .header-social-media -->
 		</div><!-- .header-section -->
